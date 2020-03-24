@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <a href="/" class="navbar-brand">ร้าน Zum-Roi</a>
+      <ul class="navbar-nav">
+        <% if(locals.user){ %>
+        <li class="nav-item">
+            <a href="/" class="nav-link">Member</a>
+        </li>
+        <li class="nav-item">
+            <a href="/users/logout" class="nav-link">Logout</a>
+        </li>
+        <% } %>
+
+        <% if(!locals.user){ %>
+        <li class="nav-item">
+            <a href="/users/register" class="nav-link">ลงทะเบียน</a>
+        </li>
+        <li class="nav-item">
+            <a href="/users/login" class="nav-link">เข้าสู่ระบบ</a>
+        </li>
+        <% } %>
+      </ul>
+</nav>
